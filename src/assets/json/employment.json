@@ -1,0 +1,86 @@
+{
+	"questiones":[
+	{
+		"question": "Which of the following best describes your current employment situation",
+		"fields": [
+			{
+				"type": "radio",
+				"options": [
+					"Employed (working for pay)",
+					"Employed, but have received notice of termination or military separation is pending",
+					"Not employed and not looking for work",
+					"Not employed, but actively looking for work"
+				],
+				"name": "employment_situation",
+				"required": true,
+				"label":"current employment situation"
+			}
+		],
+		"sectionHint": "This section is about your employment status.",
+		"questionHint": "Please select the option that best describes your current employment status."
+	},
+	{
+		"question": "How many hours per week do you work on average?",
+		"fields": [
+			{
+				"type": "input",
+				"placeholder": "Hours",
+				"name": "employment_work_hour",
+				"required": true,
+				"label":" hours per week do you work on average"
+
+			}
+		],
+		"sectionHint": "This section is about your employment status.",
+		"questionHint": "You might work part-time (e.g., 20 hours), full-time (e.g., 40 hours), or more than 40 hours per week."
+	},
+	{
+		"question": "Have you received a notice of termination or layoff?",
+		"fields": [
+			{
+				"type": "radio",
+				"options": [
+					"No",
+					"Yes"
+				],
+				"name": "termination_layoff",
+				"required": true,
+				"label":"Have you received a notice of termination or layoff"
+			}
+		],
+		"sectionHint": "This section is about your employment status.",
+		"questionHint": "Yes: If you have received a formal notice indicating that your employment will be terminated or that you are being laid off.No: If you have not received such a notice and are currently employed.Please select the option that accurately reflects your situation."
+	},
+	{
+		"question": "The notice of termination or layoff due to",
+		"fields": [
+			{
+				"type": "radio",
+				"options": [
+					"Permanent closure of your workplace",
+					"Substantial layoff at your workplace",
+					"General announcement that your facility will close within 180 days",
+					"General announcement that your facility will closed more than 180 days"
+				],
+				"name": "due_to_layoff",
+				"required": true,
+				"label":"The notice of termination or layoff due to"
+			}
+		],
+		"sectionHint": "This section is about your employment status.",
+		"questionHint": "Please select the option that best explains the reason for your notice of termination or layoff"
+	},
+	{
+		"question": "",
+		"fields": [
+			{
+				"type": "summary"
+			}
+		],
+		"sectionHint": "This section is about your Personal Identifying Information.",
+		"questionHint": "Does everything look good so far? Feel free to make any corrections. Otherwise, click 'Confirm' to proceed or 'Previous' to go back."
+	}
+],
+	"nextformName":"employment",
+	"cancelForm":"employment"
+}

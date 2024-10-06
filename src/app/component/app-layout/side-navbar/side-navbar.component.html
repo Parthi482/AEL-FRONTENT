@@ -1,0 +1,61 @@
+<div class="sidenav">
+  <div class="menu-items-noncollapsed">
+    <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" (click)="goToDashboard('dashboard')">
+        <a mat-list-item >
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="sidenav-nav-item" (click)="goToDashboard('students')">
+        <a mat-list-item >
+
+          <span>Student Details</span>
+        </a>
+      </li>
+      <li class="sidenav-nav-item" (click)="goToDashboard('personal')">
+        <a mat-list-item >
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'pending' && status.key == 'personal' ">panorama_fish_eye</mat-icon>
+          </ng-container>
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'completed' && status.key == 'personal'">check_circle_outline</mat-icon>
+          </ng-container>
+          <span>Personal Identifying Information</span>
+        </a>
+      </li>
+      <li class="sidenav-nav-item"  [ngClass]="{ 'disabled': !isDisabledLabel('disability') }"  (click)=" isDisabledLabel('disability') && goToDashboard('disability')">
+        <a mat-list-item >
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'pending' && status.key == 'disability' ">panorama_fish_eye</mat-icon>
+          </ng-container>
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'completed' && status.key == 'disability'">check_circle_outline</mat-icon>
+          </ng-container>
+          <span>Disability Status</span>
+        </a>
+      </li>
+      <li class="sidenav-nav-item"  [ngClass]="{ 'disabled': !isDisabledLabel('veteran') }"  (click)=" isDisabledLabel('veteran') && goToDashboard('veteran')">
+        <a mat-list-item >
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'pending' && status.key == 'veteran' ">panorama_fish_eye</mat-icon>
+          </ng-container>
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'completed' && status.key == 'veteran'">check_circle_outline</mat-icon>
+          </ng-container>
+          <span>Veteran Status</span>
+        </a>
+      </li>
+      <li class="sidenav-nav-item"   [ngClass]="{ 'disabled': !isDisabledLabel('employment') }"  (click)=" isDisabledLabel('employment') && goToDashboard('employment')">
+        <a mat-list-item >
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'pending' && status.key == 'employment' ">panorama_fish_eye</mat-icon>
+          </ng-container>
+          <ng-container *ngFor="let status of sideNavStatus">
+            <mat-icon *ngIf="status.status === 'completed' && status.key == 'employment'">check_circle_outline</mat-icon>
+          </ng-container>
+          <span>Employment Status</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
